@@ -2,3 +2,4 @@ streamlit
 openai
 streamlit-option-menu
 fpdf
+groq
