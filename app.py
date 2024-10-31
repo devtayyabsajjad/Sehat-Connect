@@ -1,4 +1,5 @@
 import streamlit as st
+import openai
 from groq import Groq
 from streamlit_option_menu import option_menu
 import os
@@ -9,8 +10,7 @@ import time
 st.set_page_config(page_title="Sehat Connect", page_icon="🩺", layout="wide")
 
 # Initialize Groq API
-groq_api_key = st.secrets["groq_api_key"]
-client = Groq(api_key=groq_api_key)
+open_api_key = st.secrets["openai_api_key"]
 
 # Initialize session state for navigation if not exists
 if 'page' not in st.session_state:
@@ -104,7 +104,7 @@ def get_ai_response(prompt, system_role):
                 {"role": "system", "content": system_role},
                 {"role": "user", "content": prompt}
             ],
-            model="llama3-70b-8192",
+            model="gpt-4",
         )
         return chat_completion.choices[0].message.content
     except Exception as e:
