@@ -60,6 +60,11 @@ st.markdown(
     .stTextInput>div>div>input {
         background-color: #f5f0e1;
     }
+    .rounded-image {
+        border-radius: 50%; /* Makes the image round */
+        width: 150px; /* Set width */
+        height: 150px; /* Set height */
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -177,19 +182,21 @@ def about():
     st.title("About Us 👥")
     st.write("We are a team of six passionate developers working on this Virtual Doctor project.")
 
+    # Add this description and center the content
+    
     team_members = [
-        {"name": "John Doe", "role": "Frontend Developer", "image": "https://example.com/john.jpg", "linkedin": "https://linkedin.com/in/johndoe", "github": "https://github.com/johndoe"},
-        {"name": "Jane Smith", "role": "Backend Developer", "image": "https://example.com/jane.jpg", "linkedin": "https://linkedin.com/in/janesmith", "github": "https://github.com/janesmith"},
-        {"name": "Alice Johnson", "role": "UI/UX Designer", "image": "https://example.com/alice.jpg", "linkedin": "https://linkedin.com/in/alicejohnson", "github": "https://github.com/alicejohnson"},
-        {"name": "Bob Williams", "role": "Data Scientist", "image": "https://example.com/bob.jpg", "linkedin": "https://linkedin.com/in/bobwilliams", "github": "https://github.com/bobwilliams"},
-        {"name": "Eva Brown", "role": "AI Specialist", "image": "https://example.com/eva.jpg", "linkedin": "https://linkedin.com/in/evabrown", "github": "https://github.com/evabrown"},
-        {"name": "Mike Davis", "role": "Project Manager", "image": "https://example.com/mike.jpg", "linkedin": "https://linkedin.com/in/mikedavis", "github": "https://github.com/mikedavis"},
+        {"name": "Muhammad Jawad", "role": "Data Analyst", "image": "https://media.licdn.com/dms/image/v2/D4D03AQGhdbU8hITDEA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709276424296?e=1735776000&v=beta&t=UXRAsL9BFiT2m4YbKBs1RdPOBkV1ZT6W6Uj6CEx0xw8", "linkedin": "https://www.linkedin.com/in/muhammad-jawad-86507b201/", "github": "https://github.com/mj-awad17/"},
+        {"name": "Tayyab Sajjad", "role": "Full-Stack Developer", "image": "https://media.licdn.com/dms/image/v2/D4E03AQFGCSfC75SgPw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725519960647?e=1735776000&v=beta&t=FOrIVMmQlYFY7RTUp4JLNdE5LmHkdTA6E-rLxBpVMtU", "linkedin": "www.linkedin.com/in/devtayyabsajjad", "github": "https://github.com/devtayyabsajjad"},
+        {"name": "Asim Khan", "role": "Full-Stack Developer", "image": "https://media.licdn.com/dms/image/v2/D4D03AQGluxA_ik6tyA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728585802329?e=1735776000&v=beta&t=JHbLAbAVXJ0O-Blvn29orHEGXKUKntah-k3Mz7vf_Hc", "linkedin": "https://www.linkedin.com/in/asim-khan-baloch/", "github": "https://github.com/Asimbaloch"},
+        {"name": "Muhammad Ibrahim Qasmi", "role": "Data Scientist", "image": "https://media.licdn.com/dms/image/v2/D4D03AQFSX9z8C2gRTg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722410662066?e=1735776000&v=beta&t=ycgHQ0eCvpjEak9WUUIha1-x--_tgJGWsXxF-hnMGyk", "linkedin": "https://www.linkedin.com/in/muhammad-ibrahim-qasmi-9876a1297/", "github": "https://github.com/muhammadibrahim313"},
+        {"name": "Ahmad Fakhar", "role": "Data Analyst", "image": "https://media.licdn.com/dms/image/v2/D5603AQGna-FRibZYXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710361402580?e=1735776000&v=beta&t=T9377zLifYhns1ReLAk0bxi_TtY1cWlnJLqARLfLNnU", "linkedin": "https://www.linkedin.com/in/ahmad-fakhar-357742258/", "github": "https://github.com/Ahmad-Fakhar"},
+        {"name": "Muhammad Bilal", "role": "DevOps Engineer", "image": "https://media.licdn.com/dms/image/v2/D4E03AQFyK8SIQkAFpA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688370356823?e=1735776000&v=beta&t=1Uo6GsirXGHBxUzxrjJ77x6xBB4uduHmV5uyDaRK5Nw", "linkedin": "https://www.linkedin.com/in/muhammad-bilal-a75782280/", "github": "https://github.com/bilal77511"},
     ]
 
     cols = st.columns(3)
     for idx, member in enumerate(team_members):
         with cols[idx % 3]:
-            st.image(member["image"], width=150)
+            st.markdown(f'<div style=><img src="{member["image"]}" style="width: 150px; height: 150px; border-radius: 50%;" /></div>', unsafe_allow_html=True)
             st.subheader(member["name"])
             st.write(member["role"])
             st.write(f"[LinkedIn]({member['linkedin']}) | [GitHub]({member['github']})")
