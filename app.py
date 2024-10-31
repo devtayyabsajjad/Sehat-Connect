@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+from groq import Groq
 from streamlit_option_menu import option_menu
 import os
 from fpdf import FPDF
@@ -7,8 +7,10 @@ from fpdf import FPDF
 # Set page config
 st.set_page_config(page_title="Virtual Doctor", page_icon="🩺", layout="wide")
 
-# Initialize OpenAI API
-openai.api_key = st.secrets["openai_api_key"]
+# Initialize Groq API
+# groq_api_key = st.secrets["groq_api_key"]
+groq_api_key = "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"
+client = Groq(api_key=groq_api_key)
 
 # Initialize session state for navigation if not exists
 if 'page' not in st.session_state:
@@ -61,9 +63,9 @@ st.markdown(
         background-color: #f5f0e1;
     }
     .rounded-image {
-        border-radius: 50%; /* Makes the image round */
-        width: 150px; /* Set width */
-        height: 150px; /* Set height */
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
     }
     </style>
     """,
@@ -73,14 +75,14 @@ st.markdown(
 # Helper functions
 def get_ai_response(prompt, system_role):
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-4",
+        chat_completion = client.chat.completions.create(
             messages=[
                 {"role": "system", "content": system_role},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            model="llama3-8b-8192",
         )
-        return response.choices[0].message.content
+        return chat_completion.choices[0].message.content
     except Exception as e:
         st.error(f"Error in AI response: {str(e)}")
         return "I'm sorry, I couldn't generate a response at this time."
@@ -196,7 +198,7 @@ def about():
     cols = st.columns(3)
     for idx, member in enumerate(team_members):
         with cols[idx % 3]:
-            st.markdown(f'<div style=><img src="{member["image"]}" style="width: 150px; height: 150px; border-radius: 50%;" /></div>', unsafe_allow_html=True)
+            st.markdown(f'<div style="text-align: center;"><img src="{member["image"]}" style="width: 150px; height: 150px; border-radius: 50%;" /></div>', unsafe_allow_html=True)
             st.subheader(member["name"])
             st.write(member["role"])
             st.write(f"[LinkedIn]({member['linkedin']}) | [GitHub]({member['github']})")
