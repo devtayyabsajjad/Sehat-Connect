@@ -8,8 +8,7 @@ from fpdf import FPDF
 st.set_page_config(page_title="Virtual Doctor", page_icon="🩺", layout="wide")
 
 # Initialize Groq API
-# groq_api_key = st.secrets["groq_api_key"]
-groq_api_key = "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"
+groq_api_key = st.secrets["groq_api_key"]
 client = Groq(api_key=groq_api_key)
 
 # Initialize session state for navigation if not exists
