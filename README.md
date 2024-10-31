@@ -66,9 +66,9 @@ Meet the brilliant minds behind TeleGuide:
       <a href="https://github.com/muhammadibrahim313"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="100px"/></a>
     </td>
    <td align="center"> 
-  <a href="https://www.linkedin.com/in/"><img src="https://github.com/janedoe.png" width="120px;" alt="Usama"/><sub><br><b>Muhammad Usama</b><br></sub></a><br />
-  <a href="https://www.linkedin.com/in/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" width="100px"/></a>
-  <a href="https://github.com/"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="100px"/></a>
+  <a href="https://www.linkedin.com/in/"><img src="https://github.com/janedoe.png" width="120px;" alt="Usama"/><sub><br><b>Muhammad Bilal</b><br></sub></a><br />
+  <a href="https://www.linkedin.com/in/muhammad-bilal-a75782280/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" width="100px"/></a>
+  <a href="https://github.com/bilal77511"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="100px"/></a>
 </td>
 </table>
 
