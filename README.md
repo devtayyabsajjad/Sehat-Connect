@@ -33,9 +33,7 @@ Sehat Connect is a revolutionary virtual healthcare platform that brings the pow
 - ![OpenAI](https://img.shields.io/badge/GPT--4-API-green?style=flat-square&logo=openai)
 
 ## 👥 Meet Our Amazing Team
-## 👥 Team
 
-Meet the brilliant minds behind TeleGuide:
 
 
 <table>
