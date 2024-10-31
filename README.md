@@ -115,7 +115,7 @@ Meet the brilliant minds behind TeleGuide:
   </tr>
 </table>
 
-## 📱 Screenshots
+## 📱 UI Interface
 
 <div align="center">
   <img src="https://github.com/devtayyabsajjad/Sehat-Connect/blob/main/ss/Capture1.PNG?raw=true" width="400" />
