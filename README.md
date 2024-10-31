@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="https://i.ibb.co/VvC0vpN/sehat-connect-logo.png" alt="Sehat Connect Logo" width="200"/>
-
-  # 🏥 Sehat Connect
+  <img src="https://raw.githubusercontent.com/devtayyabsajjad/Sehat-Connect/refs/heads/main/logo-removebg--preview.png" alt="Sehat Connect Logo" width="500"/>
   
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -65,16 +63,16 @@ Sehat Connect is a revolutionary virtual healthcare platform that brings the pow
       <a href="https://linkedin.com/in/muhammadjawad"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
     </td>
     <td align="center">
-      <img src="https://github.com/ahmadfakhar.png" width="100px;" alt="Ahmad Fakhar"/><br />
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQGna-FRibZYXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710361402580?e=1735776000&v=beta&t=T9377zLifYhns1ReLAk0bxi_TtY1cWlnJLqARLfLNnU" width="100px;" alt="Ahmad Fakhar"/><br />
       <sub><b>Ahmad Fakhar</b></sub><br />
       <a href="https://github.com/ahmadfakhar"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://linkedin.com/in/ahmadfakhar"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
+      <a href="https://www.linkedin.com/in/ahmad-fakhar-357742258/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
     </td>
     <td align="center">
-      <img src="https://github.com/muhammadbilal.png" width="100px;" alt="Muhammad Bilal"/><br />
+      <img src="https://media.licdn.com/dms/image/v2/D4E03AQFyK8SIQkAFpA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688370356823?e=1735776000&v=beta&t=1Uo6GsirXGHBxUzxrjJ77x6xBB4uduHmV5uyDaRK5Nw" width="100px;" alt="Muhammad Bilal"/><br />
       <sub><b>Muhammad Bilal</b></sub><br />
-      <a href="https://github.com/muhammadbilal"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://linkedin.com/in/muhammadbilal"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
+      <a href="https://github.com/bilal77511"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
+      <a href="https://www.linkedin.com/in/muhammad-bilal-a75782280/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
     </td>
   </tr>
 </table>
