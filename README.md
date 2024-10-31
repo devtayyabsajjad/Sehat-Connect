@@ -88,7 +88,7 @@ Sehat Connect is a revolutionary virtual healthcare platform that brings the pow
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/sehat-connect.git
+git clone  https://github.com/yourusername/sehat-connect.git
 ```
 2. Install dependencies
 ```bash
