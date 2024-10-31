@@ -3,9 +3,10 @@ from groq import Groq
 from streamlit_option_menu import option_menu
 import os
 from fpdf import FPDF
+import time
 
 # Set page config
-st.set_page_config(page_title="Virtual Doctor", page_icon="🩺", layout="wide")
+st.set_page_config(page_title="Sehat Connect", page_icon="🩺", layout="wide")
 
 # Initialize Groq API
 groq_api_key = st.secrets["groq_api_key"]
@@ -15,8 +16,11 @@ client = Groq(api_key=groq_api_key)
 if 'page' not in st.session_state:
     st.session_state.page = "Home"
 
-# Sidebar
+## Sidebar
 with st.sidebar:
+    # Add the image logo
+    st.image("logo-removebg-preview.png", use_column_width=True)
+
     selected = option_menu(
         menu_title="Navigation",
         options=["Home", "Doctor Chat", "Nutrition", "About"],
@@ -30,11 +34,11 @@ with st.sidebar:
             "nav-link-selected": {"background-color": "#ff6e40"},
         }
     )
-
+    
     if selected:
         st.session_state.page = selected
 
-# Add some CSS to make it attractive
+# Add some CSS to make it attractive and responsive
 st.markdown(
     """
     <style>
@@ -66,6 +70,27 @@ st.markdown(
         width: 150px;
         height: 150px;
     }
+    .tip-container {
+        background-color: #ff6e40; /* Same as button color */
+        color: #f5f0e1; /* Text color */
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin: 20px 0; /* Add some margin for spacing */
+    }
+    @media (max-width: 768px) {
+        .tip-container {
+            font-size: 16px;
+            padding: 15px;
+        }
+        .rounded-image {
+            width: 100px;
+            height: 100px;
+        }
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -79,7 +104,7 @@ def get_ai_response(prompt, system_role):
                 {"role": "system", "content": system_role},
                 {"role": "user", "content": prompt}
             ],
-            model="llama3-8b-8192",
+            model="llama3-70b-8192",
         )
         return chat_completion.choices[0].message.content
     except Exception as e:
@@ -97,21 +122,53 @@ def generate_pdf(content, filename):
     pdf.set_font("Arial", size=12)
     pdf.multi_cell(0, 10, content)
     pdf.output(filename)
+    st.success(f"PDF report generated successfully: {filename}")  # Debug statement
 
 # Page functions
 def home():
-    st.title("Welcome to Virtual Doctor 🏥")
+    st.title("Welcome to ") 
+    st.image('logo-removebg--preview.png', use_column_width=True)
     st.write("Are you feeling sick? Let our AI-powered doctor assist you!")
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("Consult Doctor"):
-            st.session_state.page = "Doctor Chat"
-            st.rerun()
-    with col2:
-        if st.button("Get Nutrition Advice"):
-            st.session_state.page = "Nutrition"
-            st.rerun()
+
+    # Add virtual tips that change every 10 seconds
+    tips = [
+        "Maintain a Balanced Diet: Incorporate a variety of fruits, vegetables, whole grains, and lean proteins into your meals.",
+        "Stay Active: Aim for at least 150 minutes of moderate aerobic activity each week.",
+        "Get Regular Check-ups: Schedule regular visits with your healthcare provider.",
+        "Practice Good Hygiene: Wash your hands thoroughly with soap and water.",
+        "Stay Hydrated: Drink plenty of water throughout the day.",
+        "Limit Sugar Intake: Reduce the consumption of sugary foods and beverages.",
+        "Prioritize Sleep: Aim for 7-9 hours of quality sleep each night.",
+        "Manage Stress: Engage in stress-reduction techniques.",
+        "Avoid Tobacco: Stay away from smoking and tobacco products.",
+        "Limit Alcohol Consumption: If you drink alcohol, do so in moderation.",
+        "Wear Sunscreen: Use sunscreen with at least SPF 30 when outdoors.",
+        "Practice Safe Sex: Use protection to reduce health risks.",
+        "Know Your Family History: Be aware of your family's medical history.",
+        "Stay Informed: Educate yourself about health issues.",
+        "Limit Processed Foods: Reduce intake of processed and fast foods.",
+        "Take Breaks from Screens: Follow the 20-20-20 rule.",
+        "Practice Mindfulness: Incorporate mindfulness practices into your routine.",
+        "Connect with Others: Maintain social connections.",
+        "Get Vaccinated: Stay up to date with vaccinations.",
+        "Incorporate Fiber: Include high-fiber foods in your diet.",
+        "Limit Caffeine Intake: Monitor your caffeine consumption.",
+        "Engage in Hobbies: Take time for activities you enjoy.",
+        "Plan Healthy Meals: Prepare meals at home.",
+        "Stay Safe While Exercising: Use safety gear when exercising outdoors."
+    ]
+
+    tip_index = 0
+    tip_container = st.empty()
+
+    while True:
+        with tip_container:
+            st.markdown(
+                f'<div class="tip-container">{tips[tip_index]}</div>',
+                unsafe_allow_html=True
+            )
+        tip_index = (tip_index + 1) % len(tips)
+        time.sleep(6)
 
     # Add some animations using Lottie
     st.markdown(
@@ -121,7 +178,7 @@ def home():
         """,
         unsafe_allow_html=True
     )
-
+    
 def doctor_chat():
     st.title("Doctor Chat 👨‍⚕️")
     
@@ -141,21 +198,12 @@ def doctor_chat():
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-        response = get_ai_response(prompt, "You are a helpful and knowledgeable doctor.")
+        response = get_ai_response(prompt, "You name is 'Dr. Tayyab Bajwa', helpful and knowledgeable doctor.")
         # Display assistant response in chat message container
         with st.chat_message("assistant"):
             st.markdown(response)
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
-
-    if st.button("Generate PDF Report"):
-        if st.session_state.messages:
-            content = "\n\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in st.session_state.messages])
-            filename = "doctor_chat_report.pdf"
-            generate_pdf(content, filename)
-            st.success(f"PDF report generated successfully! Saved as {filename}")
-        else:
-            st.warning("No chat history to generate a report from.")
 
 def nutrition():
     st.title("Nutrition Planner 🥗")
@@ -175,10 +223,11 @@ def nutrition():
             if hasattr(st.session_state, 'nutrition_plan'):
                 filename = "nutrition_plan_report.pdf"
                 generate_pdf(st.session_state.nutrition_plan, filename)
-                st.success(f"PDF report generated successfully! Saved as {filename}")
+                with open(filename, "rb") as f:
+                    st.download_button("Download Nutrition Plan", f, file_name=filename, key="download_pdf")
+                st.success(f"PDF report generated successfully!")
             else:
                 st.warning("No nutrition plan to generate a report from.")
-
 def about():
     st.title("About Us 👥")
     st.write("We are a team of six passionate developers working on this Virtual Doctor project.")
