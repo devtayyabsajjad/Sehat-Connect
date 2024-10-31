@@ -10,6 +10,10 @@ st.set_page_config(page_title="Virtual Doctor", page_icon="🩺", layout="wide")
 # Initialize OpenAI API
 openai.api_key = st.secrets["openai_api_key"]
 
+# Initialize session state for navigation if not exists
+if 'page' not in st.session_state:
+    st.session_state.page = "Home"
+
 # Sidebar
 with st.sidebar:
     selected = option_menu(
@@ -26,6 +30,9 @@ with st.sidebar:
         }
     )
 
+    if selected:
+        st.session_state.page = selected
+
 # Add some CSS to make it attractive
 st.markdown(
     """
@@ -39,6 +46,16 @@ st.markdown(
     .stButton>button {
         background-color: #ff6e40;
         color: #f5f0e1;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    .stButton>button:hover {
+        background-color: #ffc13b;
+        color: #1e3d59;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .stTextInput>div>div>input {
         background-color: #f5f0e1;
@@ -83,12 +100,12 @@ def home():
     col1, col2 = st.columns(2)
     with col1:
         if st.button("Consult Doctor"):
-            st.switch_page("app.py")  # This forces a page reload
-            st.session_state["selected"] = "Doctor Chat"
+            st.session_state.page = "Doctor Chat"
+            st.rerun()
     with col2:
         if st.button("Get Nutrition Advice"):
-            st.switch_page("app.py")  # This forces a page reload
-            st.session_state["selected"] = "Nutrition"
+            st.session_state.page = "Nutrition"
+            st.rerun()
 
     # Add some animations using Lottie
     st.markdown(
@@ -178,11 +195,11 @@ def about():
             st.write(f"[LinkedIn]({member['linkedin']}) | [GitHub]({member['github']})")
 
 # Main content
-if selected == "Home":
+if st.session_state.page == "Home":
     home()
-elif selected == "Doctor Chat":
+elif st.session_state.page == "Doctor Chat":
     doctor_chat()
-elif selected == "Nutrition":
+elif st.session_state.page == "Nutrition":
     nutrition()
-elif selected == "About":
+elif st.session_state.page == "About":
     about()
