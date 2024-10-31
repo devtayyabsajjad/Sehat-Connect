@@ -64,54 +64,12 @@ Sehat Connect is a revolutionary virtual healthcare platform that brings the pow
       <a href="https://github.com/muhammadibrahim313"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="100px"/></a>
     </td>
    <td align="center"> 
-  <a href="https://www.linkedin.com/in/"><img src="https://github.com/janedoe.png" width="120px;" alt="Usama"/><sub><br><b>Muhammad Bilal</b><br></sub></a><br />
+  <a href="https://www.linkedin.com/in/"><img src="https://media.licdn.com/dms/image/v2/D4E03AQFyK8SIQkAFpA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688370356823?e=1735776000&v=beta&t=1Uo6GsirXGHBxUzxrjJ77x6xBB4uduHmV5uyDaRK5Nw" width="120px;" alt="Usama"/><sub><br><b>Muhammad Bilal</b><br></sub></a><br />
   <a href="https://www.linkedin.com/in/muhammad-bilal-a75782280/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" width="100px"/></a>
   <a href="https://github.com/bilal77511"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="100px"/></a>
 </td>
 </table>
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://media.licdn.com/dms/image/v2/D4D03AQFSX9z8C2gRTg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722410662066?e=1735776000&v=beta&t=ycgHQ0eCvpjEak9WUUIha1-x--_tgJGWsXxF-hnMGyk" width="100px;" alt="Ibrahim Qasmi"/><br />
-      <sub><b>Muhammad Ibrahim Qasmi</b></sub><br />
-      <a href="https://github.com/muhammadibrahim313"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://www.linkedin.com/in/muhammad-ibrahim-qasmi-9876a1297/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
-    </td>
-    <td align="center">
-      <img src="https://media.licdn.com/dms/image/v2/D4D03AQGluxA_ik6tyA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728585802329?e=1735776000&v=beta&t=JHbLAbAVXJ0O-Blvn29orHEGXKUKntah-k3Mz7vf_Hc" width="100px;" alt="Asim Khan"/><br />
-      <sub><b>Asim Khan</b></sub><br />
-      <a href="https://github.com/Asimbaloch"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://www.linkedin.com/in/asim-khan-baloch/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
-    </td>
-    <td align="center">
-      <img src=""/><br />
-      <sub><b>Tayyab Sajjad</b></sub><br />
-      <a href="https://github.com/tayyabsajjad"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://linkedin.com/in/tayyabsajjad"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/muhammadjawad.png" width="100px;" alt="Muhammad Jawad"/><br />
-      <sub><b>Muhammad Jawad</b></sub><br />
-      <a href="https://github.com/muhammadjawad"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://linkedin.com/in/muhammadjawad"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
-    </td>
-    <td align="center">
-      <img src="https://media.licdn.com/dms/image/v2/D5603AQGna-FRibZYXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710361402580?e=1735776000&v=beta&t=T9377zLifYhns1ReLAk0bxi_TtY1cWlnJLqARLfLNnU" width="100px;" alt="Ahmad Fakhar"/><br />
-      <sub><b>Ahmad Fakhar</b></sub><br />
-      <a href="https://github.com/ahmadfakhar"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://www.linkedin.com/in/ahmad-fakhar-357742258/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
-    </td>
-    <td align="center">
-      <img src="https://media.licdn.com/dms/image/v2/D4E03AQFyK8SIQkAFpA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688370356823?e=1735776000&v=beta&t=1Uo6GsirXGHBxUzxrjJ77x6xBB4uduHmV5uyDaRK5Nw" width="100px;" alt="Muhammad Bilal"/><br />
-      <sub><b>Muhammad Bilal</b></sub><br />
-      <a href="https://github.com/bilal77511"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="70px"></a>
-      <a href="https://www.linkedin.com/in/muhammad-bilal-a75782280/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="70px"></a>
-    </td>
-  </tr>
-</table>
 
 ## 📱 UI Interface
 
