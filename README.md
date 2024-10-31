@@ -80,8 +80,9 @@ Sehat Connect is a revolutionary virtual healthcare platform that brings the pow
 ## 📱 Screenshots
 
 <div align="center">
-  <img src="path_to_screenshot1.png" width="400" />
-  <img src="path_to_screenshot2.png" width="400" />
+  <img src="https://github.com/devtayyabsajjad/Sehat-Connect/blob/main/ss/Capture1.PNG?raw=true" width="400" />
+  <img src="https://github.com/devtayyabsajjad/Sehat-Connect/blob/main/ss/Capture2.PNG?raw=true" width="400" />
+  <img src="https://github.com/devtayyabsajjad/Sehat-Connect/blob/main/ss/Capture3.PNG?raw=true" width="400" />
 </div>
 
 ## 🚀 Getting Started
